@@ -7,29 +7,24 @@ const port = 3000;
 
 let reservations = [];
 
-// Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
-// Rotas
 app.get('/', (req, res) => {
   res.send('API de Reserva de Carros');
 });
 
-// Rota para criar uma nova reserva
 app.post('/reservations', (req, res) => {
   const reservation = req.body;
-  reservation.id = reservations.length ? reservations[reservations.length - 1].id + 1 : 1; // Adiciona um ID à reserva
+  reservation.id = reservations.length ? reservations[reservations.length - 1].id + 1 : 1;
   reservations.push(reservation);
   res.status(201).send(reservation);
 });
 
-// Rota para obter todas as reservas
 app.get('/reservations', (req, res) => {
   res.status(200).send(reservations);
 });
 
-// Rota para atualizar uma reserva
 app.put('/reservations/:id', (req, res) => {
   const reservationId = parseInt(req.params.id);
   const index = reservations.findIndex(r => r.id === reservationId);
@@ -42,7 +37,6 @@ app.put('/reservations/:id', (req, res) => {
   }
 });
 
-// Rota para deletar uma reserva
 app.delete('/reservations/:id', (req, res) => {
   const reservationId = parseInt(req.params.id);
   const index = reservations.findIndex(r => r.id === reservationId);
