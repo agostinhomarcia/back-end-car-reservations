@@ -11,8 +11,7 @@
 
   <img alt="License" src="https://img.shields.io/github/license/agostinhomarcia/back-end-car-reservations?color=d910e0">
 
-   <img alt="Github issues" src="https://img.shields.io/github/issues/agostinhomarcia/back-end-car-reservations?color=d910e0" />
->
+   <img alt="Github issues" src="https://img.shields.io/github/issues/agostinhomarcia/back-end-car-reservations?color=d910e0"/>
 
 </p>
 
