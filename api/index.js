@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-
 let reservations = [];
 
 app.use(bodyParser.json());
